@@ -123,7 +123,7 @@ function Lightbox({
     >
       {/* Dark Backdrop */}
       <div
-        className="absolute inset-0 bg-black/90 cursor-zoom-out"
+        className="absolute inset-0 bg-black/70 backdrop-blur-xl cursor-zoom-out"
         onClick={onClose}
       />
 
@@ -194,7 +194,7 @@ export default function ZoomableImage({
   return (
     <>
       <div
-        className="w-full h-auto cursor-zoom-in group select-none overflow-hidden m-0 p-0 rounded-xl"
+        className="w-full h-auto cursor-zoom-in group select-none overflow-hidden m-0 p-0 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 bg-black/5 dark:bg-white/5"
         onClick={handleOpen}
       >
         <img

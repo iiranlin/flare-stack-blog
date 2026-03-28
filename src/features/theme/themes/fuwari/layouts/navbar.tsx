@@ -64,10 +64,10 @@ export function Navbar({
         className="fuwari-onload-animation"
         style={{ animationDelay: "0ms" }}
       >
-        <div className="fuwari-card-base overflow-visible! rounded-t-none! mx-auto flex items-center justify-between px-4 h-18 max-w-(--fuwari-page-width)">
+        <div className="fuwari-glass shadow-lg shadow-black/5 dark:shadow-black/20 rounded-2xl mx-auto flex items-center justify-between px-4 h-18 max-w-(--fuwari-page-width) overflow-visible transition-colors relative z-50">
           <Link
             to="/"
-            className="fuwari-expand-animation rounded-lg h-13 px-5 font-bold active:scale-95 flex items-center"
+            className="fuwari-expand-animation rounded-lg h-13 px-3 md:px-5 font-bold active:scale-95 flex items-center"
           >
             <Home
               size={28}

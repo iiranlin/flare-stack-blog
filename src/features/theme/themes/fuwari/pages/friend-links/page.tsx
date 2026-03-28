@@ -8,7 +8,7 @@ export function FriendLinksPage({ links }: FriendLinksPageProps) {
     <div className="flex flex-col gap-4 w-full">
       {/* Header Banner representing the current page */}
       <div
-        className="fuwari-card-base p-6 md:p-8 relative overflow-hidden flex flex-col items-center justify-center min-h-56 fuwari-onload-animation bg-linear-to-br from-(--fuwari-primary)/5 to-transparent"
+        className="fuwari-glass rounded-(--fuwari-radius-large) p-6 md:p-8 relative overflow-hidden flex flex-col items-center justify-center min-h-56 fuwari-onload-animation bg-linear-to-br from-(--fuwari-primary)/10 to-transparent shadow-sm"
         style={{ animationDelay: "150ms" }}
       >
         <h1 className="text-3xl md:text-4xl font-bold fuwari-text-90 mb-4 z-10 transition-colors">
@@ -19,7 +19,7 @@ export function FriendLinksPage({ links }: FriendLinksPageProps) {
         </p>
         <Link
           to="/submit-friend-link"
-          className="mt-6 z-10 fuwari-onload-animation fuwari-btn-primary px-6 py-2.5 rounded-xl font-bold flex items-center gap-2 active:scale-95 transition-all"
+          className="mt-6 z-10 fuwari-onload-animation fuwari-btn-primary px-8 py-3 rounded-full font-semibold flex items-center gap-2 active:scale-95 transition-all shadow-md hover:shadow-lg"
         >
           {m.friend_links_fuwari_apply()}
         </Link>
@@ -27,7 +27,7 @@ export function FriendLinksPage({ links }: FriendLinksPageProps) {
 
       {/* Links Grid */}
       <div
-        className="fuwari-card-base p-6 md:p-8 fuwari-onload-animation flex-1"
+        className="fuwari-glass rounded-(--fuwari-radius-large) p-6 md:p-8 fuwari-onload-animation flex-1 shadow-sm"
         style={{ animationDelay: "300ms" }}
       >
         {links.length > 0 ? (

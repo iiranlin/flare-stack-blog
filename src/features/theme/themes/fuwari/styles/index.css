@@ -70,8 +70,34 @@
     overflow: hidden;
     background-color: var(--fuwari-card-bg);
     transition:
-      background-color 0.3s,
-      color 0.3s;
+      background-color 0.4s ease-in-out,
+      box-shadow 0.4s ease-in-out,
+      transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+      color 0.4s ease-in-out;
+  }
+
+  .fuwari-card-base:hover {
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08); /* Soft elevated shadow */
+    transform: translateY(-2px);
+  }
+
+  .dark .fuwari-card-base:hover {
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Premium Glassmorphism */
+  .fuwari-glass {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .dark .fuwari-glass {
+    background: rgba(40, 40, 45, 0.5); /* Slightly darker sleek glass */
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .fuwari-btn-regular {

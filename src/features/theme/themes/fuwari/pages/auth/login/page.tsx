@@ -57,7 +57,7 @@ export function LoginPage({
                 placeholder={m.login_email_placeholder()}
                 autoComplete="username"
                 disabled={isFormDisabled}
-                className="w-full bg-(--fuwari-input-bg) border border-(--fuwari-input-border) rounded-xl px-4 py-3 text-(--fuwari-text-90) placeholder:text-black/30 dark:placeholder:text-white/30 focus:outline-none focus:border-(--fuwari-primary)/50 focus:bg-(--fuwari-primary)/5 transition-all text-sm outline-none"
+                className="w-full bg-(--fuwari-input-bg) border border-(--fuwari-input-border) rounded-2xl px-5 py-3.5 text-(--fuwari-text-90) placeholder:text-black/30 dark:placeholder:text-white/30 focus:outline-none focus:border-(--fuwari-primary)/50 focus:bg-(--fuwari-primary)/5 focus:ring-4 focus:ring-(--fuwari-primary)/10 transition-all text-sm outline-none"
               />
               {errors.email && (
                 <span className="text-xs text-red-500 ml-1 mt-1 font-medium">
@@ -86,7 +86,7 @@ export function LoginPage({
                 placeholder={m.login_password_placeholder()}
                 autoComplete="current-password"
                 disabled={isFormDisabled}
-                className="w-full bg-(--fuwari-input-bg) border border-(--fuwari-input-border) rounded-xl px-4 py-3 text-(--fuwari-text-90) placeholder:text-black/30 dark:placeholder:text-white/30 focus:outline-none focus:border-(--fuwari-primary)/50 focus:bg-(--fuwari-primary)/5 transition-all text-sm outline-none"
+                className="w-full bg-(--fuwari-input-bg) border border-(--fuwari-input-border) rounded-2xl px-5 py-3.5 text-(--fuwari-text-90) placeholder:text-black/30 dark:placeholder:text-white/30 focus:outline-none focus:border-(--fuwari-primary)/50 focus:bg-(--fuwari-primary)/5 focus:ring-4 focus:ring-(--fuwari-primary)/10 transition-all text-sm outline-none"
               />
               {errors.password && (
                 <span className="text-xs text-red-500 ml-1 mt-1 font-medium">
@@ -98,7 +98,7 @@ export function LoginPage({
             <button
               type="submit"
               disabled={isFormDisabled}
-              className="mt-2 w-full py-3.5 rounded-xl fuwari-btn-primary font-bold text-sm tracking-wide active:scale-[0.98] transition-all gap-2"
+              className="mt-4 w-full py-4 rounded-full shadow-md hover:shadow-lg fuwari-btn-primary font-bold text-sm tracking-wide active:scale-[0.98] transition-all gap-2"
             >
               {loginStep === "VERIFYING" ? (
                 <>
@@ -128,7 +128,7 @@ export function LoginPage({
           type="button"
           onClick={handleGithubLogin}
           disabled={isSocialDisabled}
-          className={`group w-full py-3.5 rounded-xl flex gap-3 transition-all font-bold text-sm active:scale-[0.98] disabled:opacity-50 disabled:active:scale-100 ${
+          className={`group w-full py-4 rounded-full flex gap-3 shadow-md hover:shadow-lg transition-all font-bold text-sm active:scale-[0.98] disabled:opacity-50 disabled:active:scale-100 ${
             !isEmailConfigured ? "fuwari-btn-primary" : "fuwari-btn-regular"
           }`}
         >

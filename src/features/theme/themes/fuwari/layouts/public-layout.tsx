@@ -36,8 +36,8 @@ export function PublicLayout({
       />
 
       {/* Top row: Navbar - sticky */}
-      <div className="sticky top-0 z-50 pointer-events-none">
-        <div className="pointer-events-auto max-w-(--fuwari-page-width) mx-auto px-0 md:px-4">
+      <div className="sticky top-0 z-50 pointer-events-none pt-2 md:pt-4 transition-all duration-300">
+        <div className="pointer-events-auto max-w-(--fuwari-page-width) mx-auto px-2 md:px-4">
           <Navbar
             navOptions={navOptions}
             onMenuClick={() => setIsMenuOpen(true)}

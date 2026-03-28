@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouteContext } from "@tanstack/react-router";
 import { useMemo } from "react";
 import { useViewCounts } from "@/features/pageview/queries";
 import type { PostItem } from "@/features/posts/schema/posts.schema";
@@ -13,6 +13,7 @@ interface MergedPost {
 }
 
 export function HomePage({ posts, pinnedPosts, popularPosts }: HomePageProps) {
+  const { siteConfig } = useRouteContext({ from: "__root__" });
   const delayOffset = 50;
 
   const mergedPosts = useMemo(() => {
@@ -52,7 +53,24 @@ export function HomePage({ posts, pinnedPosts, popularPosts }: HomePageProps) {
     useViewCounts(allSlugs);
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-6">
+      {/* Hero Section */}
+      <div
+        className="fuwari-onload-animation"
+        style={{ animationDelay: "100ms" }}
+      >
+        <div className="fuwari-glass flex flex-col items-center justify-center p-12 text-center rounded-(--fuwari-radius-large) shadow-sm relative overflow-hidden group">
+          <div className="absolute inset-0 bg-linear-to-tr from-[rgba(255,255,255,0.1)] to-[rgba(255,255,255,0.02)] pointer-events-none" />
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight drop-shadow-sm text-balance">
+            {siteConfig.title}
+          </h1>
+          <p className="text-lg md:text-xl text-(--fuwari-text-75) max-w-2xl text-balance">
+            {siteConfig.description}
+          </p>
+        </div>
+      </div>
+
+      {/* Posts Section */}
       <div className="flex flex-col rounded-(--fuwari-radius-large) bg-(--fuwari-card-bg) py-1 md:py-0 md:bg-transparent md:gap-4">
         {mergedPosts.map(({ post, pinned, popular }, i) => (
           <div

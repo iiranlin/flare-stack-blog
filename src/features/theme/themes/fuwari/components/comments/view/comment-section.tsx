@@ -154,8 +154,8 @@ export function FuwariCommentSection({ postId }: FuwariCommentSectionProps) {
             {m.comments_join_discussion()}
           </p>
           <Link to="/login">
-            <button className="fuwari-btn-primary h-9 px-5 text-sm rounded-lg gap-2">
-              <LogIn size={14} />
+            <button className="fuwari-btn-primary h-10 px-6 text-sm rounded-full gap-2 font-medium shadow-sm hover:shadow-md transition-all active:scale-[0.98]">
+              <LogIn size={16} />
               {m.comments_login()}
             </button>
           </Link>
@@ -188,7 +188,7 @@ export function FuwariCommentSection({ postId }: FuwariCommentSectionProps) {
           <button
             onClick={() => fetchNextPage()}
             disabled={isFetchingNextPage}
-            className="fuwari-btn-regular h-10 px-6 text-sm rounded-lg disabled:opacity-50"
+            className="fuwari-btn-regular h-10 px-6 text-sm rounded-full shadow-sm hover:shadow-md transition-all active:scale-[0.98] disabled:opacity-50 font-medium"
           >
             {isFetchingNextPage ? m.comments_loading() : m.comments_load_more()}
           </button>

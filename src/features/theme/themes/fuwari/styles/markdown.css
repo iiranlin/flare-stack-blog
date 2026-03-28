@@ -134,17 +134,25 @@
   }
 
   blockquote {
-    @apply not-italic border-transparent relative;
+    @apply not-italic border-transparent relative px-6 py-4 my-6 rounded-r-2xl bg-(--fuwari-primary)/5 dark:bg-(--fuwari-primary)/10 text-(--fuwari-meta-divider);
     font-weight: inherit;
 
     &:before {
-      @apply content-[''] absolute -left-1 block transition bg-(--fuwari-btn-regular-bg) h-full w-1 rounded-full;
+      @apply content-[''] absolute left-0 top-0 block transition-all hover:w-2 bg-(--fuwari-primary) h-full w-1.5 rounded-l-2xl;
     }
 
     /* Remove the double quotes from default styles */
     p:before,
     p:after {
       @apply content-none;
+    }
+
+    p:first-child {
+      @apply mt-0;
+    }
+
+    p:last-child {
+      @apply mb-0;
     }
   }
 

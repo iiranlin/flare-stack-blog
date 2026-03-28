@@ -54,18 +54,18 @@ export const FuwariCommentItem = memo(
       <div
         id={`comment-${comment.id}`}
         className={cn(
-          "group flex gap-3 md:gap-4 py-5 md:py-6 scroll-mt-32 transition-colors duration-500",
+          "group flex gap-3 md:gap-4 py-4 md:py-5 px-4 -mx-4 rounded-2xl scroll-mt-32 transition-all duration-300 hover:bg-black/5 dark:hover:bg-white/5",
           isReply
-            ? "ml-3 pl-3 border-l-2 border-black/5 dark:border-white/5 md:ml-8 md:pl-6"
-            : "border-b border-black/5 dark:border-white/5",
+            ? "ml-3 md:ml-6 mt-1"
+            : "border-b border-black/5 dark:border-white/5 mb-2 hover:border-transparent",
           isHighlighted &&
-            "bg-(--fuwari-btn-plain-bg-hover) -mx-4 px-4 rounded-xl",
+            "bg-(--fuwari-btn-plain-bg-hover) ring-1 ring-(--fuwari-primary)/20",
           className,
         )}
       >
         {/* Avatar */}
         <div className="shrink-0 pt-0.5">
-          <div className="w-9 h-9 rounded-full bg-black/5 dark:bg-white/10 overflow-hidden flex items-center justify-center transition">
+          <div className="w-10 h-10 rounded-full bg-black/5 dark:bg-white/10 overflow-hidden flex items-center justify-center transition shadow-sm ring-1 ring-black/5 dark:ring-white/10">
             {comment.status === "deleted" ? (
               <span className="text-xs fuwari-text-30">✕</span>
             ) : comment.user?.image ? (

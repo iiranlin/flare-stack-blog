@@ -79,7 +79,14 @@ export const CodeBlock = memo(
 
     return (
       <div className="relative group max-w-full my-6 not-prose">
-        <div className="expressive-code relative rounded-xl border border-black/10 dark:border-white/10 bg-(--fuwari-code-bg) overflow-hidden transition-colors shadow-sm">
+        <div className="expressive-code relative rounded-xl border border-black/10 dark:border-white/10 bg-(--fuwari-code-bg) overflow-hidden transition-colors shadow-md dark:shadow-black/40">
+          {/* macOS Window Controls */}
+          <div className="flex gap-1.5 px-4 pt-3.5 pb-1 absolute top-0 left-0 z-10 pointer-events-none">
+            <div className="w-3 h-3 rounded-full bg-red-500/80 hidden md:block"></div>
+            <div className="w-3 h-3 rounded-full bg-amber-500/80 hidden md:block"></div>
+            <div className="w-3 h-3 rounded-full bg-green-500/80 hidden md:block"></div>
+          </div>
+
           {/* Language Badge */}
           <div
             className={cn(

@@ -12,7 +12,7 @@ export function ProfilePage({
   logout,
 }: ProfilePageProps) {
   const inputClassName =
-    "w-full px-4 py-2.5 rounded-xl border border-(--fuwari-input-border) bg-(--fuwari-input-bg) focus:outline-none focus:ring-2 focus:ring-(--fuwari-primary)/50 focus:border-transparent transition-all fuwari-text-90 placeholder:text-black/30 dark:placeholder:text-white/30";
+    "w-full px-5 py-3.5 rounded-2xl border border-(--fuwari-input-border) bg-(--fuwari-input-bg) focus:outline-none focus:ring-4 focus:ring-(--fuwari-primary)/10 focus:border-(--fuwari-primary)/50 transition-all fuwari-text-90 placeholder:text-black/30 dark:placeholder:text-white/30 text-sm";
   const labelClassName =
     "block text-sm font-medium fuwari-text-75 mb-1.5 transition-colors";
 
@@ -20,7 +20,7 @@ export function ProfilePage({
     <div className="flex flex-col gap-6 w-full max-w-4xl mx-auto pb-12">
       {/* Header Profile Section */}
       <div
-        className="fuwari-card-base p-8 md:p-10 relative overflow-hidden flex flex-col items-center justify-center fuwari-onload-animation bg-linear-to-br from-(--fuwari-primary)/5 to-transparent"
+        className="fuwari-glass rounded-(--fuwari-radius-large) p-8 md:p-10 relative overflow-hidden flex flex-col items-center justify-center fuwari-onload-animation bg-linear-to-br from-(--fuwari-primary)/10 to-transparent shadow-sm"
         style={{ animationDelay: "150ms" }}
       >
         <div
@@ -58,7 +58,7 @@ export function ProfilePage({
         {/* Left Column: Settings Form */}
         <div className="lg:col-span-2 flex flex-col gap-6">
           <div
-            className="fuwari-card-base p-6 md:p-8 fuwari-onload-animation flex flex-col gap-6"
+            className="fuwari-glass rounded-(--fuwari-radius-large) p-6 md:p-8 fuwari-onload-animation flex flex-col gap-6 shadow-sm"
             style={{ animationDelay: "200ms" }}
           >
             <div className="flex items-center gap-3 pb-4 border-b border-(--fuwari-btn-regular-bg)">
@@ -118,7 +118,7 @@ export function ProfilePage({
           {/* Security Document section if form is available */}
           {passwordForm && (
             <div
-              className="fuwari-card-base p-6 md:p-8 fuwari-onload-animation flex flex-col gap-6"
+              className="fuwari-glass rounded-(--fuwari-radius-large) p-6 md:p-8 fuwari-onload-animation flex flex-col gap-6 shadow-sm"
               style={{ animationDelay: "300ms" }}
             >
               <div className="flex items-center gap-3 pb-4 border-b border-(--fuwari-btn-regular-bg)">
@@ -200,7 +200,7 @@ export function ProfilePage({
         <div className="flex flex-col gap-6">
           {notification.available && (
             <div
-              className="fuwari-card-base p-6 fuwari-onload-animation flex flex-col gap-6"
+              className="fuwari-glass rounded-(--fuwari-radius-large) p-6 fuwari-onload-animation flex flex-col gap-6 shadow-sm"
               style={{ animationDelay: "250ms" }}
             >
               <h3 className="text-lg font-bold fuwari-text-90 border-b border-(--fuwari-btn-regular-bg) pb-3">
@@ -238,7 +238,7 @@ export function ProfilePage({
           )}
 
           <div
-            className="fuwari-card-base p-6 fuwari-onload-animation flex flex-col gap-3"
+            className="fuwari-glass rounded-(--fuwari-radius-large) p-6 fuwari-onload-animation flex flex-col gap-3 shadow-sm"
             style={{ animationDelay: "350ms" }}
           >
             <h3 className="text-lg font-bold fuwari-text-90 border-b border-(--fuwari-btn-regular-bg) pb-3 mb-2">

@@ -30,7 +30,7 @@ export function PostPage({ post }: PostPageProps) {
       </div>
 
       {/* Main Post Container */}
-      <div className="fuwari-card-base z-10 px-6 md:px-9 pt-6 pb-4 relative w-full fuwari-onload-animation">
+      <div className="fuwari-glass rounded-(--fuwari-radius-large) z-10 px-6 md:px-10 pt-8 pb-6 relative w-full fuwari-onload-animation shadow-sm">
         {/* Word count and reading time */}
         <div className="flex flex-row flex-wrap fuwari-text-30 gap-5 mb-3 transition">
           <div className="flex flex-row items-center">
@@ -115,7 +115,7 @@ export function PostPage({ post }: PostPageProps) {
 
       {/* Comments Section */}
       <div
-        className="fuwari-card-base p-6 fuwari-onload-animation"
+        className="fuwari-glass rounded-(--fuwari-radius-large) p-6 fuwari-onload-animation shadow-sm"
         style={{ animationDelay: "450ms" }}
       >
         <FuwariCommentSection postId={post.id} />

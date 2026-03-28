@@ -23,7 +23,7 @@ export function SearchPage({
     <div className="w-full max-w-4xl mx-auto flex flex-col gap-6 pb-12">
       {/* Header Area */}
       <div
-        className="fuwari-card-base p-6 md:p-8 flex items-center gap-4 fuwari-onload-animation"
+        className="fuwari-glass rounded-(--fuwari-radius-large) p-6 md:p-8 flex items-center gap-4 fuwari-onload-animation shadow-sm"
         style={{ animationDelay: "100ms" }}
       >
         <button
@@ -45,7 +45,7 @@ export function SearchPage({
             value={query}
             onChange={(e) => onQueryChange(e.target.value)}
             placeholder={m.search_placeholder()}
-            className="w-full pl-12 pr-12 py-3 rounded-xl border border-(--fuwari-input-border) bg-(--fuwari-input-bg) focus:outline-none focus:border-(--fuwari-primary)/50 focus:bg-(--fuwari-primary)/5 transition-all fuwari-text-90 text-lg md:text-xl placeholder:text-black/30 dark:placeholder:text-white/30"
+            className="w-full pl-12 pr-12 py-3.5 rounded-2xl border border-(--fuwari-input-border) bg-(--fuwari-input-bg) focus:outline-none focus:border-(--fuwari-primary)/50 focus:bg-(--fuwari-primary)/5 focus:ring-4 focus:ring-(--fuwari-primary)/10 transition-all fuwari-text-90 text-lg md:text-xl placeholder:text-black/30 dark:placeholder:text-white/30"
           />
           {isSearching && (
             <div className="absolute right-4 w-5 h-5 fuwari-text-50 pointer-events-none flex items-center justify-center">
@@ -59,7 +59,7 @@ export function SearchPage({
       <div className="flex flex-col gap-4">
         {query.trim() === "" && (
           <div
-            className="fuwari-card-base p-16 flex flex-col items-center justify-center text-center fuwari-onload-animation"
+            className="fuwari-glass rounded-(--fuwari-radius-large) p-16 flex flex-col items-center justify-center text-center fuwari-onload-animation shadow-sm"
             style={{ animationDelay: "200ms" }}
           >
             <div className="w-20 h-20 rounded-full bg-(--fuwari-btn-regular-bg) flex items-center justify-center mb-6 text-(--fuwari-btn-content)">
@@ -76,7 +76,7 @@ export function SearchPage({
 
         {query.trim() !== "" && !isSearching && results.length === 0 && (
           <div
-            className="fuwari-card-base p-12 flex flex-col items-center justify-center text-center fuwari-onload-animation"
+            className="fuwari-glass rounded-(--fuwari-radius-large) p-12 flex flex-col items-center justify-center text-center fuwari-onload-animation shadow-sm"
             style={{ animationDelay: "200ms" }}
           >
             <div className="w-16 h-16 rounded-full bg-(--fuwari-btn-regular-bg) flex items-center justify-center mb-4 text-(--fuwari-btn-content)">
@@ -95,7 +95,7 @@ export function SearchPage({
           <button
             key={result.post.id}
             onClick={() => onSelectPost(result.post.slug)}
-            className="fuwari-card-base p-6 text-left w-full group hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col gap-3 fuwari-onload-animation outline-none focus-visible:ring-2 focus-visible:ring-(--fuwari-primary)/50"
+            className="fuwari-glass rounded-(--fuwari-radius-large) p-6 text-left w-full group hover:-translate-y-1 hover:shadow-md hover:ring-1 hover:ring-(--fuwari-primary)/30 transition-all duration-300 flex flex-col gap-3 fuwari-onload-animation outline-none focus-visible:ring-2 focus-visible:ring-(--fuwari-primary)/50"
             style={{ animationDelay: `${200 + index * 50}ms` }}
           >
             {/* Title with highlighting */}
