@@ -1,13 +1,13 @@
 import type { SiteConfig } from "@/features/config/site-config.schema";
 
 export const blogConfig = {
-  title: "站点名称",
-  author: "作者",
+  title: "古法代码传承者 · 冉林",
+  author: "冉林",
   description:
-    "这是我的个人网站和博客。在这里，我主要分享与技术和生活相关的内容。欢迎阅读！",
+    "用古法的匠心，书写现代代码。这里记录一个开发者在技术探索与生活感悟之间的点滴，欢迎一同慢慢品味。",
   social: [
-    { platform: "github", url: "https://github.com/example" },
-    { platform: "email", url: "mailto:example@email.com" },
+    { platform: "github", url: "https://github.com/iiranlin" },
+    { platform: "email", url: "mailto:mumu@irlin.cn" },
     { platform: "rss", url: "/rss.xml" },
   ],
   icons: {
@@ -20,11 +20,11 @@ export const blogConfig = {
   },
   theme: {
     default: {
-      navBarName: "导航栏名称",
+      navBarName: "冉林の博客",
     },
     fuwari: {
       homeBg: "/images/home-bg.webp",
-      avatar: "/images/avatar.png",
+      avatar: "/avatar.webp",
       primaryHue: 250,
     },
   },
