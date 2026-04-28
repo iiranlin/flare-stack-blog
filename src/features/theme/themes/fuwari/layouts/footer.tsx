@@ -1,4 +1,4 @@
-import { useRouteContext } from "@tanstack/react-router";
+import { ClientOnly, useRouteContext } from "@tanstack/react-router";
 import type { NavOption } from "@/features/theme/contract/layouts";
 import { m } from "@/paraglide/messages";
 
@@ -15,10 +15,12 @@ export function Footer(_: FooterProps) {
       <div className="border-t border-black/10 dark:border-white/10 my-10 mx-4 md:mx-32" />
       <div className="fuwari-glass rounded-2xl mb-12 flex flex-col items-center justify-center px-6 py-8 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] dark:shadow-none">
         <div className="fuwari-text-50 text-sm text-center">
-          {m.footer_copyright({
-            year: currentYear.toString(),
-            author: siteConfig.author,
-          })}{" "}
+          <ClientOnly fallback="-">
+            {m.footer_copyright({
+              year: currentYear.toString(),
+              author: siteConfig.author,
+            })}
+          </ClientOnly>{" "}
           /{" "}
           <a
             href="/rss.xml"
